@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit Converter v1.0.0</title>
+  <meta name="description" content="길이, 무게, 온도, 면적, 부피, 속도, 데이터 단위를 빠르게 변환합니다." />
+
+  <!-- 캐시 버전 (원하면 숫자만 올리면 됨) -->
+  <link rel="stylesheet" href="./unit.css?v=20260304_1" />
+
+  <!-- 애드센스 공통 스크립트(이미 다른 페이지에서 쓰는 걸로 교체/유지) -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  -->
+</head>
+
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="brand">
+        <div class="title">단위변환기</div>
+        <div class="subtitle">필요한 단위만 빠르게. 값 입력하면 즉시 변환.</div>
+      </div>
+
+      <nav class="nav">
+        <a class="navLink" href="https://fx.koreanblog.xyz" target="_blank" rel="noopener">환율계산기</a>
+        <a class="navLink" href="#" id="shareBtn">공유</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <!-- 좌측 광고 (데스크탑에서만 노출) -->
+      <aside class="adCol adLeft">
+        <div class="adBox">
+          <!-- 여기에 좌측 광고 유닛 -->
+          <!--
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-XXXXXXXXXXXX"
+               data-ad-slot="XXXXXXXXXX"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          -->
+          <div class="adPlaceholder">AD</div>
+        </div>
+      </aside>
+
+      <!-- 본문 -->
+      <section class="card">
+        <div class="row">
+          <label class="label" for="category">카테고리</label>
+          <select id="category" class="select"></select>
+        </div>
+
+        <div class="grid2">
+          <div class="block">
+            <div class="blockHead">
+              <div class="blockTitle">변환 전</div>
+            </div>
+
+            <div class="row">
+              <label class="label" for="fromValue">값</label>
+              <input id="fromValue" class="input" inputmode="decimal" autocomplete="off" placeholder="예: 12.5" />
+            </div>
+
+            <div class="row">
+              <label class="label" for="fromUnit">단위</label>
+              <select id="fromUnit" class="select"></select>
+            </div>
+          </div>
+
+          <div class="mid">
+            <button id="swapBtn" class="swapBtn" type="button" aria-label="swap">
+              ⇄
+            </button>
+            <div class="hint">자리 바꾸기</div>
+          </div>
+
+          <div class="block">
+            <div class="blockHead">
+              <div class="blockTitle">변환 후</div>
+            </div>
+
+            <div class="row">
+              <label class="label" for="toValue">결과</label>
+              <input id="toValue" class="input" readonly />
+            </div>
+
+            <div class="row">
+              <label class="label" for="toUnit">단위</label>
+              <select id="toUnit" class="select"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini">
+          <div class="miniRow">
+            <div class="miniKey">정밀도</div>
+            <div class="miniVal">
+              <select id="precision" class="select small">
+                <option value="2">소수 2자리</option>
+                <option value="4" selected>소수 4자리</option>
+                <option value="6">소수 6자리</option>
+                <option value="8">소수 8자리</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="miniRow">
+            <div class="miniKey">빠른 입력</div>
+            <div class="miniVal quick">
+              <button class="chip" data-set="1" type="button">1</button>
+              <button class="chip" data-set="10" type="button">10</button>
+              <button class="chip" data-set="100" type="button">100</button>
+              <button class="chip" data-set="1000" type="button">1000</button>
+              <button class="chip" data-set="0" type="button">초기화</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="note" id="note"></div>
+
+        <footer class="footer">
+          <div class="footerLeft">
+            마지막 업데이트: <span id="updatedAt"></span>
+          </div>
+          <div class="footerRight">
+            <a class="tinyLink" href="https://fx.koreanblog.xyz" target="_blank" rel="noopener">환율계산기 가기</a>
+          </div>
+        </footer>
+      </section>
+
+      <!-- 우측 광고 (데스크탑에서만 노출) -->
+      <aside class="adCol adRight">
+        <div class="adBox">
+          <!-- 여기에 우측 광고 유닛 -->
+          <div class="adPlaceholder">AD</div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- 하단 광고 (모바일/데스크탑 모두) -->
+    <div class="bottomAd">
+      <div class="adBox">
+        <!-- 여기에 하단 광고 유닛 -->
+        <div class="adPlaceholder">AD</div>
+      </div>
+    </div>
+
+    <div class="tinyBottom">
+      unit.koreanblog.xyz · Unit Converter v1.0.0
+    </div>
+  </div>
+
+  <script src="./unit.js?v=20260304_1"></script>
+</body>
+</html>
